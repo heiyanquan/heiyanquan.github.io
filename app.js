@@ -10,10 +10,11 @@ $(function() {
     var isAndroid = ua.indexOf('Android') > -1 || ua.indexOf('Adr') > -1; //android终端
     var isiOS = !!ua.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
 
+    TDAPP.onEvent("体检报告看不懂");
 
 
     $.ajax({
-        url: 'https://wxapi.ihaozhuo.com/' + 'getWeiXinSign',
+        url: 'http://wxapi.ihaozhuo.com/' + 'getWeiXinSign',
         data: JSON.stringify({
             url: location.href
         }),
@@ -71,7 +72,7 @@ $(function() {
     function numChange(){
         var _html = '';
         $.ajax({
-            url: 'https://activity.ihaozhuo.com/get518Num',
+            url: 'http://activity.ihaozhuo.com/get518Num',
             type: 'post',
             contentType: 'text/plain',
             success: function(res){
@@ -87,6 +88,7 @@ $(function() {
     }
 
     $('#J_Native').on('tap', function(){
+        TDAPP.onEvent("体检报告看不懂_立即申请", "立即申请", { '商品名': '体检报告看不懂_立即申请' });
         if(ua.toUpperCase().indexOf('YJK') > -1){
             location.href = location.href + '&page=getTelInterpretation&flag=1';
         }else{
