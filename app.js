@@ -13,7 +13,7 @@ $(function() {
 
 
     $.ajax({
-        url: 'http://wxapi.ihaozhuo.com/' + 'getWeiXinSign',
+        url: 'https://wxapi.ihaozhuo.com/' + 'getWeiXinSign',
         data: JSON.stringify({
             url: location.href
         }),
