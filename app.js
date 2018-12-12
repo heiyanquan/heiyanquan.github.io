@@ -71,7 +71,7 @@ $(function() {
     function numChange(){
         var _html = '';
         $.ajax({
-            url: 'http://activity.ihaozhuo.com/get518Num',
+            url: 'https://activity.ihaozhuo.com/get518Num',
             type: 'post',
             contentType: 'text/plain',
             success: function(res){
