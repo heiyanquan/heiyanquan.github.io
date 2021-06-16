@@ -1,0 +1,289 @@
+<h2 id="button-an-niu"><a class="header-anchor" href="#button-an-niu">¶</a> Button 按钮</h2>
+<p>常用的操作按钮。</p>
+<h3 id="ji-chu-yong-fa"><a class="header-anchor" href="#ji-chu-yong-fa">¶</a> 基础用法</h3>
+<p>基础的按钮用法。</p>
+<demo-block>
+        <div><p>使用<code>type</code>、<code>plain</code>、<code>round</code>和<code>circle</code>属性来定义 Button 的样式。</p>
+</div>
+        <!--element-demo: <el-row>
+  <el-button>默认按钮</el-button>
+  <el-button type="primary">主要按钮</el-button>
+  <el-button type="success">成功按钮</el-button>
+  <el-button type="info">信息按钮</el-button>
+  <el-button type="warning">警告按钮</el-button>
+  <el-button type="danger">危险按钮</el-button>
+</el-row>
+
+<el-row>
+  <el-button plain>朴素按钮</el-button>
+  <el-button type="primary" plain>主要按钮</el-button>
+  <el-button type="success" plain>成功按钮</el-button>
+  <el-button type="info" plain>信息按钮</el-button>
+  <el-button type="warning" plain>警告按钮</el-button>
+  <el-button type="danger" plain>危险按钮</el-button>
+</el-row>
+
+<el-row>
+  <el-button round>圆角按钮</el-button>
+  <el-button type="primary" round>主要按钮</el-button>
+  <el-button type="success" round>成功按钮</el-button>
+  <el-button type="info" round>信息按钮</el-button>
+  <el-button type="warning" round>警告按钮</el-button>
+  <el-button type="danger" round>危险按钮</el-button>
+</el-row>
+
+<el-row>
+  <el-button icon="el-icon-search" circle></el-button>
+  <el-button type="primary" icon="el-icon-edit" circle></el-button>
+  <el-button type="success" icon="el-icon-check" circle></el-button>
+  <el-button type="info" icon="el-icon-message" circle></el-button>
+  <el-button type="warning" icon="el-icon-star-off" circle></el-button>
+  <el-button type="danger" icon="el-icon-delete" circle></el-button>
+</el-row>
+:element-demo-->
+        <template slot="highlight"><pre v-pre><code class="html">&lt;el-row&gt;
+  &lt;el-button&gt;默认按钮&lt;/el-button&gt;
+  &lt;el-button type=&quot;primary&quot;&gt;主要按钮&lt;/el-button&gt;
+  &lt;el-button type=&quot;success&quot;&gt;成功按钮&lt;/el-button&gt;
+  &lt;el-button type=&quot;info&quot;&gt;信息按钮&lt;/el-button&gt;
+  &lt;el-button type=&quot;warning&quot;&gt;警告按钮&lt;/el-button&gt;
+  &lt;el-button type=&quot;danger&quot;&gt;危险按钮&lt;/el-button&gt;
+&lt;/el-row&gt;
+
+&lt;el-row&gt;
+  &lt;el-button plain&gt;朴素按钮&lt;/el-button&gt;
+  &lt;el-button type=&quot;primary&quot; plain&gt;主要按钮&lt;/el-button&gt;
+  &lt;el-button type=&quot;success&quot; plain&gt;成功按钮&lt;/el-button&gt;
+  &lt;el-button type=&quot;info&quot; plain&gt;信息按钮&lt;/el-button&gt;
+  &lt;el-button type=&quot;warning&quot; plain&gt;警告按钮&lt;/el-button&gt;
+  &lt;el-button type=&quot;danger&quot; plain&gt;危险按钮&lt;/el-button&gt;
+&lt;/el-row&gt;
+
+&lt;el-row&gt;
+  &lt;el-button round&gt;圆角按钮&lt;/el-button&gt;
+  &lt;el-button type=&quot;primary&quot; round&gt;主要按钮&lt;/el-button&gt;
+  &lt;el-button type=&quot;success&quot; round&gt;成功按钮&lt;/el-button&gt;
+  &lt;el-button type=&quot;info&quot; round&gt;信息按钮&lt;/el-button&gt;
+  &lt;el-button type=&quot;warning&quot; round&gt;警告按钮&lt;/el-button&gt;
+  &lt;el-button type=&quot;danger&quot; round&gt;危险按钮&lt;/el-button&gt;
+&lt;/el-row&gt;
+
+&lt;el-row&gt;
+  &lt;el-button icon=&quot;el-icon-search&quot; circle&gt;&lt;/el-button&gt;
+  &lt;el-button type=&quot;primary&quot; icon=&quot;el-icon-edit&quot; circle&gt;&lt;/el-button&gt;
+  &lt;el-button type=&quot;success&quot; icon=&quot;el-icon-check&quot; circle&gt;&lt;/el-button&gt;
+  &lt;el-button type=&quot;info&quot; icon=&quot;el-icon-message&quot; circle&gt;&lt;/el-button&gt;
+  &lt;el-button type=&quot;warning&quot; icon=&quot;el-icon-star-off&quot; circle&gt;&lt;/el-button&gt;
+  &lt;el-button type=&quot;danger&quot; icon=&quot;el-icon-delete&quot; circle&gt;&lt;/el-button&gt;
+&lt;/el-row&gt;
+</code></pre></template></demo-block><h3 id="jin-yong-zhuang-tai"><a class="header-anchor" href="#jin-yong-zhuang-tai">¶</a> 禁用状态</h3>
+<p>按钮不可用状态。</p>
+<demo-block>
+        <div><p>你可以使用<code>disabled</code>属性来定义按钮是否可用，它接受一个<code>Boolean</code>值。</p>
+</div>
+        <!--element-demo: <el-row>
+  <el-button disabled>默认按钮</el-button>
+  <el-button type="primary" disabled>主要按钮</el-button>
+  <el-button type="success" disabled>成功按钮</el-button>
+  <el-button type="info" disabled>信息按钮</el-button>
+  <el-button type="warning" disabled>警告按钮</el-button>
+  <el-button type="danger" disabled>危险按钮</el-button>
+</el-row>
+
+<el-row>
+  <el-button plain disabled>朴素按钮</el-button>
+  <el-button type="primary" plain disabled>主要按钮</el-button>
+  <el-button type="success" plain disabled>成功按钮</el-button>
+  <el-button type="info" plain disabled>信息按钮</el-button>
+  <el-button type="warning" plain disabled>警告按钮</el-button>
+  <el-button type="danger" plain disabled>危险按钮</el-button>
+</el-row>
+:element-demo-->
+        <template slot="highlight"><pre v-pre><code class="html">&lt;el-row&gt;
+  &lt;el-button disabled&gt;默认按钮&lt;/el-button&gt;
+  &lt;el-button type=&quot;primary&quot; disabled&gt;主要按钮&lt;/el-button&gt;
+  &lt;el-button type=&quot;success&quot; disabled&gt;成功按钮&lt;/el-button&gt;
+  &lt;el-button type=&quot;info&quot; disabled&gt;信息按钮&lt;/el-button&gt;
+  &lt;el-button type=&quot;warning&quot; disabled&gt;警告按钮&lt;/el-button&gt;
+  &lt;el-button type=&quot;danger&quot; disabled&gt;危险按钮&lt;/el-button&gt;
+&lt;/el-row&gt;
+
+&lt;el-row&gt;
+  &lt;el-button plain disabled&gt;朴素按钮&lt;/el-button&gt;
+  &lt;el-button type=&quot;primary&quot; plain disabled&gt;主要按钮&lt;/el-button&gt;
+  &lt;el-button type=&quot;success&quot; plain disabled&gt;成功按钮&lt;/el-button&gt;
+  &lt;el-button type=&quot;info&quot; plain disabled&gt;信息按钮&lt;/el-button&gt;
+  &lt;el-button type=&quot;warning&quot; plain disabled&gt;警告按钮&lt;/el-button&gt;
+  &lt;el-button type=&quot;danger&quot; plain disabled&gt;危险按钮&lt;/el-button&gt;
+&lt;/el-row&gt;
+</code></pre></template></demo-block><h3 id="wen-zi-an-niu"><a class="header-anchor" href="#wen-zi-an-niu">¶</a> 文字按钮</h3>
+<p>没有边框和背景色的按钮。</p>
+<demo-block>
+        
+        <!--element-demo: <el-button type="text">文字按钮</el-button>
+<el-button type="text" disabled>文字按钮</el-button>
+:element-demo-->
+        <template slot="highlight"><pre v-pre><code class="html">&lt;el-button type=&quot;text&quot;&gt;文字按钮&lt;/el-button&gt;
+&lt;el-button type=&quot;text&quot; disabled&gt;文字按钮&lt;/el-button&gt;
+</code></pre></template></demo-block><h3 id="tu-biao-an-niu"><a class="header-anchor" href="#tu-biao-an-niu">¶</a> 图标按钮</h3>
+<p>带图标的按钮可增强辨识度（有文字）或节省空间（无文字）。</p>
+<demo-block>
+        <div><p>设置<code>icon</code>属性即可，icon 的列表可以参考 Element 的 icon 组件，也可以设置在文字右边的 icon ，只要使用<code>i</code>标签即可，可以使用自定义图标。</p>
+</div>
+        <!--element-demo: <el-button type="primary" icon="el-icon-edit"></el-button>
+<el-button type="primary" icon="el-icon-share"></el-button>
+<el-button type="primary" icon="el-icon-delete"></el-button>
+<el-button type="primary" icon="el-icon-search">搜索</el-button>
+<el-button type="primary">上传<i class="el-icon-upload el-icon--right"></i></el-button>
+:element-demo-->
+        <template slot="highlight"><pre v-pre><code class="html">&lt;el-button type=&quot;primary&quot; icon=&quot;el-icon-edit&quot;&gt;&lt;/el-button&gt;
+&lt;el-button type=&quot;primary&quot; icon=&quot;el-icon-share&quot;&gt;&lt;/el-button&gt;
+&lt;el-button type=&quot;primary&quot; icon=&quot;el-icon-delete&quot;&gt;&lt;/el-button&gt;
+&lt;el-button type=&quot;primary&quot; icon=&quot;el-icon-search&quot;&gt;搜索&lt;/el-button&gt;
+&lt;el-button type=&quot;primary&quot;&gt;上传&lt;i class=&quot;el-icon-upload el-icon--right&quot;&gt;&lt;/i&gt;&lt;/el-button&gt;
+</code></pre></template></demo-block><h3 id="an-niu-zu"><a class="header-anchor" href="#an-niu-zu">¶</a> 按钮组</h3>
+<p>以按钮组的方式出现，常用于多项类似操作。</p>
+<demo-block>
+        <div><p>使用<code>&lt;el-button-group&gt;</code>标签来嵌套你的按钮。</p>
+</div>
+        <!--element-demo: <el-button-group>
+  <el-button type="primary" icon="el-icon-arrow-left">上一页</el-button>
+  <el-button type="primary">下一页<i class="el-icon-arrow-right el-icon--right"></i></el-button>
+</el-button-group>
+<el-button-group>
+  <el-button type="primary" icon="el-icon-edit"></el-button>
+  <el-button type="primary" icon="el-icon-share"></el-button>
+  <el-button type="primary" icon="el-icon-delete"></el-button>
+</el-button-group>
+:element-demo-->
+        <template slot="highlight"><pre v-pre><code class="html">&lt;el-button-group&gt;
+  &lt;el-button type=&quot;primary&quot; icon=&quot;el-icon-arrow-left&quot;&gt;上一页&lt;/el-button&gt;
+  &lt;el-button type=&quot;primary&quot;&gt;下一页&lt;i class=&quot;el-icon-arrow-right el-icon--right&quot;&gt;&lt;/i&gt;&lt;/el-button&gt;
+&lt;/el-button-group&gt;
+&lt;el-button-group&gt;
+  &lt;el-button type=&quot;primary&quot; icon=&quot;el-icon-edit&quot;&gt;&lt;/el-button&gt;
+  &lt;el-button type=&quot;primary&quot; icon=&quot;el-icon-share&quot;&gt;&lt;/el-button&gt;
+  &lt;el-button type=&quot;primary&quot; icon=&quot;el-icon-delete&quot;&gt;&lt;/el-button&gt;
+&lt;/el-button-group&gt;
+</code></pre></template></demo-block><h3 id="jia-zai-zhong"><a class="header-anchor" href="#jia-zai-zhong">¶</a> 加载中</h3>
+<p>点击按钮后进行数据加载操作，在按钮上显示加载状态。</p>
+<demo-block>
+        <div><p>要设置为 loading 状态，只要设置<code>loading</code>属性为<code>true</code>即可。</p>
+</div>
+        <!--element-demo: <el-button type="primary" :loading="true">加载中</el-button>
+:element-demo-->
+        <template slot="highlight"><pre v-pre><code class="html">&lt;el-button type=&quot;primary&quot; :loading=&quot;true&quot;&gt;加载中&lt;/el-button&gt;
+</code></pre></template></demo-block><h3 id="bu-tong-chi-cun"><a class="header-anchor" href="#bu-tong-chi-cun">¶</a> 不同尺寸</h3>
+<p>Button 组件提供除了默认值以外的三种尺寸，可以在不同场景下选择合适的按钮尺寸。</p>
+<demo-block>
+        <div><p>额外的尺寸：<code>medium</code>、<code>small</code>、<code>mini</code>，通过设置<code>size</code>属性来配置它们。</p>
+</div>
+        <!--element-demo: <el-row>
+  <el-button>默认按钮</el-button>
+  <el-button size="medium">中等按钮</el-button>
+  <el-button size="small">小型按钮</el-button>
+  <el-button size="mini">超小按钮</el-button>
+</el-row>
+<el-row>
+  <el-button round>默认按钮</el-button>
+  <el-button size="medium" round>中等按钮</el-button>
+  <el-button size="small" round>小型按钮</el-button>
+  <el-button size="mini" round>超小按钮</el-button>
+</el-row>
+:element-demo-->
+        <template slot="highlight"><pre v-pre><code class="html">&lt;el-row&gt;
+  &lt;el-button&gt;默认按钮&lt;/el-button&gt;
+  &lt;el-button size=&quot;medium&quot;&gt;中等按钮&lt;/el-button&gt;
+  &lt;el-button size=&quot;small&quot;&gt;小型按钮&lt;/el-button&gt;
+  &lt;el-button size=&quot;mini&quot;&gt;超小按钮&lt;/el-button&gt;
+&lt;/el-row&gt;
+&lt;el-row&gt;
+  &lt;el-button round&gt;默认按钮&lt;/el-button&gt;
+  &lt;el-button size=&quot;medium&quot; round&gt;中等按钮&lt;/el-button&gt;
+  &lt;el-button size=&quot;small&quot; round&gt;小型按钮&lt;/el-button&gt;
+  &lt;el-button size=&quot;mini&quot; round&gt;超小按钮&lt;/el-button&gt;
+&lt;/el-row&gt;
+</code></pre></template></demo-block><h3 id="attributes"><a class="header-anchor" href="#attributes">¶</a> Attributes</h3>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>可选值</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>size</td>
+<td>尺寸</td>
+<td>string</td>
+<td>medium / small / mini</td>
+<td>—</td>
+</tr>
+<tr>
+<td>type</td>
+<td>类型</td>
+<td>string</td>
+<td>primary / success / warning / danger / info / text</td>
+<td>—</td>
+</tr>
+<tr>
+<td>plain</td>
+<td>是否朴素按钮</td>
+<td>boolean</td>
+<td>—</td>
+<td>false</td>
+</tr>
+<tr>
+<td>round</td>
+<td>是否圆角按钮</td>
+<td>boolean</td>
+<td>—</td>
+<td>false</td>
+</tr>
+<tr>
+<td>circle</td>
+<td>是否圆形按钮</td>
+<td>boolean</td>
+<td>—</td>
+<td>false</td>
+</tr>
+<tr>
+<td>loading</td>
+<td>是否加载中状态</td>
+<td>boolean</td>
+<td>—</td>
+<td>false</td>
+</tr>
+<tr>
+<td>disabled</td>
+<td>是否禁用状态</td>
+<td>boolean</td>
+<td>—</td>
+<td>false</td>
+</tr>
+<tr>
+<td>icon</td>
+<td>图标类名</td>
+<td>string</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>autofocus</td>
+<td>是否默认聚焦</td>
+<td>boolean</td>
+<td>—</td>
+<td>false</td>
+</tr>
+<tr>
+<td>native-type</td>
+<td>原生 type 属性</td>
+<td>string</td>
+<td>button / submit / reset</td>
+<td>button</td>
+</tr>
+</tbody>
+</table>

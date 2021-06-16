@@ -1,0 +1,143 @@
+
+<h2 id="color-se-cai"><a class="header-anchor" href="#color-se-cai">¶</a> Color 色彩</h2>
+<p>Element 为了避免视觉传达差异，使用一套特定的调色板来规定颜色，为你所搭建的产品提供一致的外观视觉感受。</p>
+<h3 id="zhu-se"><a class="header-anchor" href="#zhu-se">¶</a> 主色</h3>
+<p>Element 主要品牌颜色是鲜艳、友好的蓝色。</p>
+<el-row :gutter="12">
+  <el-col :span="10" :xs="{span: 12}">
+    <div class="demo-color-box" :style="{ background: primary }">Brand Color
+      <div class="value">#409EFF</div>
+      <div class="bg-color-sub" :style="{ background: tintColor(primary, 0.9) }">
+        <div
+          class="bg-blue-sub-item"
+          v-for="(item, key) in Array(8)"
+          :key="key"
+          :style="{ background: tintColor(primary, (key + 1) / 10) }"
+        ></div>
+      </div>
+    </div>
+  </el-col>
+</el-row>
+<h3 id="fu-zhu-se"><a class="header-anchor" href="#fu-zhu-se">¶</a> 辅助色</h3>
+<p>除了主色外的场景色，需要在不同的场景中使用（例如危险色表示危险的操作）。</p>
+<el-row :gutter="12">
+  <el-col :span="6" :xs="{span: 12}">
+    <div class="demo-color-box"
+    :style="{ background: success }"
+    >Success<div class="value">#67C23A</div>
+      <div 
+        class="bg-color-sub"
+      >
+        <div 
+          class="bg-success-sub-item" 
+          v-for="(item, key) in Array(2)"
+          :key="key"
+          :style="{ background: tintColor(success, (key + 8) / 10) }"
+            >
+        </div>
+      </div>
+    </div>
+  </el-col>
+  <el-col :span="6" :xs="{span: 12}">
+    <div class="demo-color-box"
+    :style="{ background: warning }"
+    >Warning<div class="value">#E6A23C</div>
+      <div 
+          class="bg-color-sub"
+        >
+        <div 
+          class="bg-success-sub-item" 
+          v-for="(item, key) in Array(2)"
+          :key="key"
+          :style="{ background: tintColor(warning, (key + 8) / 10) }"
+            >
+        </div>
+      </div>
+    </div>
+  </el-col>
+  <el-col :span="6" :xs="{span: 12}">
+    <div class="demo-color-box"
+    :style="{ background: danger }"
+    >Danger<div class="value">#F56C6C</div>
+      <div 
+          class="bg-color-sub"
+        >
+        <div 
+          class="bg-success-sub-item" 
+          v-for="(item, key) in Array(2)"
+          :key="key"
+          :style="{ background: tintColor(danger, (key + 8) / 10) }"
+            >
+        </div>
+      </div>
+    </div>
+  </el-col>
+  <el-col :span="6" :xs="{span: 12}">
+    <div class="demo-color-box"
+    :style="{ background: info }"
+    >Info<div class="value">#909399</div>
+      <div 
+          class="bg-color-sub"
+        >
+        <div 
+          class="bg-success-sub-item" 
+          v-for="(item, key) in Array(2)"
+          :key="key"
+          :style="{ background: tintColor(info, (key + 8) / 10) }"
+            >
+        </div>
+      </div>
+    </div>
+  </el-col>
+</el-row>
+<h3 id="zhong-xing-se"><a class="header-anchor" href="#zhong-xing-se">¶</a> 中性色</h3>
+<p>中性色用于文本、背景和边框颜色。通过运用不同的中性色，来表现层次结构。</p>
+<el-row :gutter="12">
+  <el-col :span="6" :xs="{span: 12}">
+    <div class="demo-color-box-group">
+      <div class="demo-color-box demo-color-box-other"
+      :style="{ background: textPrimary }"
+      >主要文字<div class="value">{{textPrimary}}</div></div>
+      <div class="demo-color-box demo-color-box-other"
+      :style="{ background: textRegular }"
+      >
+      常规文字<div class="value">{{textRegular}}</div></div>
+      <div class="demo-color-box demo-color-box-other"
+      :style="{ background: textSecondary }"
+      >次要文字<div class="value">{{textSecondary}}</div></div>
+      <div class="demo-color-box demo-color-box-other"
+      :style="{ background: textPlaceholder }"
+      >占位文字<div class="value">{{textPlaceholder}}</div></div>
+    </div>
+  </el-col>
+  <el-col :span="6" :xs="{span: 12}">
+    <div class="demo-color-box-group">
+      <div class="demo-color-box demo-color-box-other demo-color-box-lite"
+      :style="{ background: borderBase }"
+      >一级边框<div class="value">{{borderBase}}</div></div>
+      <div class="demo-color-box demo-color-box-other demo-color-box-lite"
+      :style="{ background: borderLight }"
+      >二级边框<div class="value">{{borderLight}}</div></div>
+      <div class="demo-color-box demo-color-box-other demo-color-box-lite"
+      :style="{ background: borderLighter }"
+      >三级边框<div class="value">{{borderLighter}}</div></div>
+      <div class="demo-color-box demo-color-box-other demo-color-box-lite"
+      :style="{ background: borderExtraLight }"
+      >四级边框<div class="value">{{borderExtraLight}}</div></div>
+    </div>
+  </el-col>
+  <el-col :span="6" :xs="{span: 12}">
+    <div class="demo-color-box-group">
+      <div 
+      class="demo-color-box demo-color-box-other"
+      :style="{ background: black }"
+      >基础黑色<div class="value">{{black}}</div></div>
+      <div
+      class="demo-color-box demo-color-box-other"
+      :style="{ background: white, color: '#303133', border: '1px solid #eee' }"
+      >基础白色<div class="value">{{white}}</div></div>
+      <div class="demo-color-box demo-color-box-other bg-transparent">透明<div class="value">Transparent</div>
+      </div>
+    </div>
+  </el-col>
+</el-row>
